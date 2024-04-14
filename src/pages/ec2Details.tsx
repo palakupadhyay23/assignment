@@ -4,7 +4,7 @@ import SearchBox from "../components/search/SearchBox";
 import EC2 from "../components/searchResult/EC2";
 import TopSearch from "../components/search/TopSearch";
 import Image from "next/image";
-import user from '../../public/images/user.png';
+import user from "../../public/images/user.png";
 import { STRING_CONSTANTS } from "../components/constants/StringConstants";
 
 const mainContainer: any = {
@@ -12,13 +12,13 @@ const mainContainer: any = {
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-  background: "#F2F5F9"
-}
+  background: "#F2F5F9",
+};
 
 const searchResultContainer = {
   padding: "20px",
-  width: "85%"
-}
+  width: "85%",
+};
 
 const searchStyle = {
   height: "40px",
@@ -28,15 +28,17 @@ const searchStyle = {
   borderRadius: "12px",
   display: "flex",
   columnGap: "20px",
-  alignItems: "center"
-}
+  alignItems: "center",
+};
 
 const ec2Details = () => {
-  const { USER_ICON, INNER_TEXT: { TOP_SEARCH_RESULTS }} = STRING_CONSTANTS;
+  const {
+    USER_ICON,
+    INNER_TEXT: { TOP_SEARCH_RESULTS },
+  } = STRING_CONSTANTS;
 
   return (
     <div style={mainContainer}>
-
       <div style={searchResultContainer}>
         <div style={searchStyle}>
           <Image src={user} alt={USER_ICON} width={20} height={20} />
@@ -45,10 +47,10 @@ const ec2Details = () => {
       </div>
       <EC2 />
       <Feedback />
-      <TopSearch page={'/'} />
+      <TopSearch page={"/imageGraph"} />
       <SearchBox />
     </div>
-  )
+  );
 };
 
 export default ec2Details;

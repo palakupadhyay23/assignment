@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
 
 const LikeDislikeIcons = () => {
   const [feedback, setFeedback] = useState(false);
@@ -7,57 +7,57 @@ const LikeDislikeIcons = () => {
   const [dislikeHovered, setDislikeHovered] = useState(false);
 
   const iconStyle: React.CSSProperties = {
-    marginRight: '10px', // Adjust spacing
-    cursor: 'pointer', // Show pointer cursor on hover
+    marginRight: "10px", // Adjust spacing
+    cursor: "pointer", // Show pointer cursor on hover
   };
 
   const hoveredIconStyle: React.CSSProperties = {
     ...iconStyle,
-    color: 'green', // Color when hovered
+    color: "green", // Color when hovered
   };
 
   const disLikeHoveredIconStyle: React.CSSProperties = {
     ...iconStyle,
-    color: 'red', // Color when hovered
+    color: "red", // Color when hovered
   };
 
   const question = {
     fontSize: "16px",
-    paddingRight: "20px"
+    paddingRight: "20px",
   };
 
-  const feedbackWrapper  = {
+  const feedbackWrapper = {
     display: "flex",
     justifyContent: "center",
-    padding: "20px"
-  }
+    padding: "0 20px",
+  };
 
   const feedbackContainer = {
     display: "flex",
-    alignItems: "center"
-  }
+    alignItems: "center",
+  };
 
   return (
     <div style={feedbackWrapper}>
-    {feedback ? (
-      <div> Thank you for your feedback! </div>
-    ) : (
-    <div style={feedbackContainer}>
-      <p style={question}>Is this conversation helpful so far?</p>
-      <FaThumbsUp
-        style={likeHovered ? hoveredIconStyle : iconStyle}
-        onMouseEnter={() => setLikeHovered(true)}
-        onMouseLeave={() => setLikeHovered(false)}
-        onClick={() => setFeedback(true)}
-      />
-      <FaThumbsDown
-        style={dislikeHovered ? disLikeHoveredIconStyle : iconStyle}
-        onMouseEnter={() => setDislikeHovered(true)}
-        onMouseLeave={() => setDislikeHovered(false)}
-        onClick={() => setFeedback(true)}
-      />
-    </div>
-    )}
+      {feedback ? (
+        <div> Thank you for your feedback! </div>
+      ) : (
+        <div style={feedbackContainer}>
+          <p style={question}>Is this conversation helpful so far?</p>
+          <FaThumbsUp
+            style={likeHovered ? hoveredIconStyle : iconStyle}
+            onMouseEnter={() => setLikeHovered(true)}
+            onMouseLeave={() => setLikeHovered(false)}
+            onClick={() => setFeedback(true)}
+          />
+          <FaThumbsDown
+            style={dislikeHovered ? disLikeHoveredIconStyle : iconStyle}
+            onMouseEnter={() => setDislikeHovered(true)}
+            onMouseLeave={() => setDislikeHovered(false)}
+            onClick={() => setFeedback(true)}
+          />
+        </div>
+      )}
     </div>
   );
 };

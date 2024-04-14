@@ -2,11 +2,8 @@ import TextMessage from "@/components/common/TextMessage";
 import Feedback from "../components/common/Feedback";
 import SearchBox from "../components/search/SearchBox";
 import CodeSnippet from "../components/searchResult/CodeSnippet";
-import TopSearch from "../components/search/TopSearch";
 import Image from "next/image";
-import user from '../../public/images/user.png';
-import chevron from '../../public/images/chevronDown.svg';
-import Collapsible from "react-collapsible";
+import user from "../../public/images/user.png";
 import { STRING_CONSTANTS } from "../components/constants/StringConstants";
 
 const mainContainer: any = {
@@ -14,8 +11,8 @@ const mainContainer: any = {
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-  background: "#F2F5F9"
-}
+  background: "#F2F5F9",
+};
 
 const searchStyle = {
   height: "40px",
@@ -26,50 +23,18 @@ const searchStyle = {
   borderRadius: "12px",
   display: "flex",
   columnGap: "20px",
-  alignItems: "center"
+  alignItems: "center",
 };
 
 const mainWrapper = {
-  width: "90%"
+  width: "90%",
 };
-
-const columnContainer: any = {
-  display: "flex",
-  alignItems: "center",
-  cursor: "pointer",
-  background: "white",
-  borderRadius: "10px",
-  padding: "15px 20px"
-};
-
-const line = {
-  flex: 1,
-  borderBottom: "1px solid black"
-};
-
-const collapsibleStyle = {
-  width: "100%",
-  background: "white",
-  margin: "10px",
-  borderRadius: "15px",
-};
-
-const topSearchContainer = {
-  width: "80%",
-  padding: "30px",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center"
-};
-
-const collapsible = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center"
-}
 
 const snippetDetails = () => {
-  const {CHEVRON_ICON, USER_ICON, INNER_TEXT: { COLUMN_CONTAINER, SEARCH_RESULTS }} = STRING_CONSTANTS;
+  const {
+    USER_ICON,
+    INNER_TEXT: { SEARCH_RESULTS },
+  } = STRING_CONSTANTS;
 
   return (
     <div style={mainContainer}>
@@ -79,31 +44,11 @@ const snippetDetails = () => {
           <TextMessage text={SEARCH_RESULTS} />
         </div>
         <CodeSnippet />
-
-        <div style={collapsibleStyle}>
-          <Collapsible trigger={
-            <div style={columnContainer}>
-              <TextMessage text={COLUMN_CONTAINER} />
-              <span style={line}></span>
-              <Image src={chevron} alt={CHEVRON_ICON} width={20} height={20} />
-            </div>
-          }
-            transitionTime={200}
-            open={true}
-            style={collapsible}
-            triggerDisabled={true}
-          >
-            <div style={topSearchContainer}>
-                <TopSearch page={'/ec2Details'} />
-            </div>
-          </Collapsible>
-        </div>
-
         <Feedback />
         <SearchBox />
       </div>
     </div>
-  )
+  );
 };
 
 export default snippetDetails;
