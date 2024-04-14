@@ -1,5 +1,5 @@
 import Link from "next/link";
-import TextMessage from "../TextMessage";
+import TextMessage from "../common/TextMessage";
 import { STRING_CONSTANTS } from "../constants/StringConstants";
 
 const linkStyle = {

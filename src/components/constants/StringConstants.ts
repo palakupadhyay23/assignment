@@ -22,7 +22,7 @@ export const STRING_CONSTANTS = {
         BUCKET: "Bucket xyz-logs-1 (production account #12345)",
         SAVINGS_AREA: "Top 2 saving areas",
         AREA: "Here are your top 2 saving areas:",
-        SEARCH_RESULTS: "How much money are we",
+        SEARCH_RESULTS: "Top cloud costs by services in production account (#24542)",
         TOP_SEARCH_RESULTS: "Top Cloud cost by services"
     },
     SNIPPET: {
@@ -39,3 +39,60 @@ export const STRING_CONSTANTS = {
         DESC: "11.  total_cost DESC"
     }
 };
+
+export const questions = [
+    [
+     {
+         text: "Top cloud costs by services in production account (#24542)",
+         disable: false
+     },
+     {
+         text: "Which application's cost are increasing the fastest?",
+         disable: true
+     },
+     {
+         text: "How much money are we losing by not moving to graviton instances?",
+         disable: true
+     },
+     {
+         text: "Which are the largest 3 buckets by size?",
+         disable: true
+     }
+    ],
+    [
+     {
+         text: "Which services costs are rising the fastest?",
+         disable: true
+     },
+     {
+         text: "How can I reduce my $3 costs?",
+         disable: true
+     },
+     {
+         text: "How can I reduce my RDS. costs?",
+         disable: true
+     },
+     {
+         text: "How can I reduce my EC2 costs?",
+         disable: false
+     }
+    ],
+    [
+     {
+         text: "Which services costs are rising the fastest?",
+         disable: true
+     },
+     {
+         text: "How can I reduce my S3 costs?",
+         disable: true
+     },
+     {
+         text: "How can I reduce my RDS costs?",
+         disable: true
+     },
+     {
+         text: "Why are EC2 costs increasing so much?",
+         disable: false
+     }
+    ]
+ ]

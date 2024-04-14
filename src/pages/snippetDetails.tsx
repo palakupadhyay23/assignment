@@ -1,13 +1,13 @@
 import TextMessage from "@/components/common/TextMessage";
 import Feedback from "../components/common/Feedback";
-import SearchBox from "../components/common/search/SearchBox";
-import CodeSnippet from "../components/common/searchResult/CodeSnippet";
-import TopSearch from "../components/common/search/TopSearch";
+import SearchBox from "../components/search/SearchBox";
+import CodeSnippet from "../components/searchResult/CodeSnippet";
+import TopSearch from "../components/search/TopSearch";
 import Image from "next/image";
 import user from '../../public/images/user.png';
 import chevron from '../../public/images/chevronDown.svg';
 import Collapsible from "react-collapsible";
-import { STRING_CONSTANTS } from "../components/common/constants/StringConstants";
+import { STRING_CONSTANTS } from "../components/constants/StringConstants";
 
 const mainContainer: any = {
   display: "flex",

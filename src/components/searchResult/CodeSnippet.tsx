@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import CodeBlock from '../CodeBlock';
-import CloudCostChart from '../CloudCostChart';
-import TextMessage from '../TextMessage';
+import CodeBlock from '../common/CodeBlock';
+import CloudCostChart from '../common/CloudCostChart';
+import TextMessage from '../common/TextMessage';
 import Collapsible from 'react-collapsible';
 import Image from 'next/image';
-import chevron from '../../../../public/images/chevronDown.svg';
-import astutoCloudLogo from '../../../../public/images/CloudLogo.jpeg';
+import chevron from './../../../public/images/chevronDown.svg';
+import astutoCloudLogo from './../../../public/images/CloudLogo.jpeg';
 import { IoCopyOutline } from "react-icons/io5";
 import { CiExport } from "react-icons/ci";
 import { STRING_CONSTANTS } from '../constants/StringConstants';
+import { TfiReload } from "react-icons/tfi";
 
 const container: any = {
   padding: "20px",
@@ -76,6 +77,9 @@ const logoContainer = {
   alignItems: "center",
   padding: "20px"
 }
+const latestRunStyle = {
+  color: "grey"
+}
 
 const CodeSnippet: React.FC = () => {
   const { CHEVRON_ICON, LOGO, JAVASCRIPT, QUERY,  INNER_TEXT: { PRODUCTION_RESULT, PIE_CHART }, SNIPPET: { SELECT, SERVICE, TOTAL_COST, FROM, CLOUD_COSTS, WHERE, ACCOUNT_TYPE, GROUP_BY, SERVICES, ORDER_BY, DESC
@@ -121,6 +125,18 @@ const CodeSnippet: React.FC = () => {
         >
 
           <CodeBlock codeString={codeString} language={JAVASCRIPT} />
+          <div style={iconsContainer}>
+            <div style={leftIcon}>
+              <IoCopyOutline />
+              <p>Copy Query</p>
+            </div>
+
+            <div style={leftIcon}>
+              <p style={latestRunStyle}>Last run on 12 Oct, 2023</p>
+              <TfiReload />
+              <p>Re-run Query</p>
+            </div>
+          </div>
         </Collapsible>
       </div>
 

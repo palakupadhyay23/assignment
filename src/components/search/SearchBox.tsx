@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import ArrowImage from '../../../../public/images/rightArrow.png';
-import codeIcon from '../../../../public/images/code.png';
+import ArrowImage from '../../../public/images/rightArrow.png';
+import codeIcon from '../../../public/images/code.png';
 import { STRING_CONSTANTS } from '../constants/StringConstants';
 
 const searchWrapper = {
@@ -26,7 +26,8 @@ const inputStyle = {
     marginLeft: "15px",
     outline: "none",
     borderColor: "transparent",
-    pointerEvents: "none"
+    pointerEvents: "none",
+    backgroundColor: "white"
 }
 
 const searchStyle = {

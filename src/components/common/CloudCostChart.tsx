@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
-import { STRING_CONSTANTS } from './constants/StringConstants';
+import { STRING_CONSTANTS } from '../constants/StringConstants';
 
 const chartContainer = {
   width: "30%",
-  padding: "20px"
+  padding: "20px",
+  margin: "0 auto", // Center align the chart container
 }
 
 const CloudCostChart = () => {

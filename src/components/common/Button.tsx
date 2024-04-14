@@ -10,10 +10,11 @@ const defaultBtnStyles = {
     fontSize: "14px",
     border: "grey 1px solid",
     borderRadius: "12px",
-    cursor: "pointer"
+    cursor: "pointer",
+    transition: "background-color 0.3s ease"
 };
 
-const Button = ({ text, btnStyles = defaultBtnStyles, btnHandler }: any) => {
+const Button = ({ text, btnStyles = defaultBtnStyles, btnHandler, disabled }: any) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseEnter = () => {
@@ -35,6 +36,7 @@ const Button = ({ text, btnStyles = defaultBtnStyles, btnHandler }: any) => {
             onClick={btnHandler}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            disabled={disabled}
         >
             {text}
             {isHovered && <Image src={ArrowImage} alt="arrow" width={15} height={15} style={{ marginLeft: '20px', filter: 'brightness(150%)', color: 'red' }} />}

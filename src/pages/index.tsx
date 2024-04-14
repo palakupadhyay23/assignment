@@ -1,6 +1,6 @@
 
-import SearchBox from "../components/common/search/SearchBox";
-import TopSearch from "../components/common/search/TopSearch";
+import SearchBox from "../components/search/SearchBox";
+import TopSearch from "../components/search/TopSearch";
 
 const mainContainer: any = {
   display: "flex",

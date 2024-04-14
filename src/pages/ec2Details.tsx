@@ -1,11 +1,11 @@
 import TextMessage from "@/components/common/TextMessage";
 import Feedback from "../components/common/Feedback";
-import SearchBox from "../components/common/search/SearchBox";
-import EC2 from "../components/common/searchResult/EC2";
-import TopSearch from "../components/common/search/TopSearch";
+import SearchBox from "../components/search/SearchBox";
+import EC2 from "../components/searchResult/EC2";
+import TopSearch from "../components/search/TopSearch";
 import Image from "next/image";
 import user from '../../public/images/user.png';
-import { STRING_CONSTANTS } from "../components/common/constants/StringConstants";
+import { STRING_CONSTANTS } from "../components/constants/StringConstants";
 
 const mainContainer: any = {
   display: "flex",
